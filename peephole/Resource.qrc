@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/orbbec.ico</file>
+        <file>res/fold.png</file>
+        <file>res/unfold.png</file>
+    </qresource>
+</RCC>

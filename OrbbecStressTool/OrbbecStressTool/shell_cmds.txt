@@ -1,0 +1,213 @@
+shell xxx  
+shell xxx xxx1 
+shell serial  
+shell serial unlock 	 //开锁
+shell serial openwq 	 //打开物奇串口
+shell serial eventnote2mcu 	 //发送事件eventnote给mcu，传入已定义好的事件宏，底层打包数据(不建议使用)
+shell serial data2mcu 	 //通用接口，发送协议data数据给mcu //参数---data数据区内容，底层会根据奥比或客户协议自动打包数据帧头、长度校验；example: header source type length [data0 data1 data2 ... dataN] checksum
+shell serial rx 	 //调试用，推送原始协议数据到串口，模拟猫眼串口收到外部设备传过来的数据
+shell serial tx 	 //调试用，推送原始协议数据到串口TX，发送给外部设备（如MCU）
+shell serial sdb 	 //串口模块一般/通用调试函数入口
+shell serial isinited 	 //串口是否初始化完成
+shell serial isconnectmcu 	 //串口是否连接客户锁控
+shell serial syncstate 
+shell cloud  
+shell cloud alarm 
+shell cloud bell 
+shell cloud linkstatus 
+shell cloud senddata 
+shell cloud init 
+shell cloud uninit 
+shell cloud lanch 
+shell cloud recvp 	 //主控接收属性数据接 （腾讯云下发）
+shell cloud recvpr 	 //主控接收云对属性的应答 （腾讯云下发）
+shell cloud recver 	 //主控接收云对事件的应答 （腾讯云下发）
+shell cloud recva 	 //主控接收云的下发action （腾讯云下发）
+shell rec  
+shell rec init 
+shell rec start 
+shell rec record 
+shell rec stop 
+shell rec rdel 
+shell rec rlist 
+shell rec sdcard 
+shell rec getstatus 
+shell rec cbstatus 
+shell rec starttest 
+shell rec onlyaudio 
+shell rec rdb 
+shell rec ctl 
+shell rec play 
+shell rec pstop 
+shell rec pstatus 
+shell rec wflash 
+shell wifi  
+shell wifi ota 
+shell wifi rst 	 //复位wifi芯片（同时会复位/重启gk）
+shell wifi mrst 	 //设置wifi re_init syslink, 通知wifi主控需要重启，让wifi提前准备初始化syslink（注：gk需要调用cmd_reset自身重启）
+shell wifi frst 	 //恢复wifi出厂设置
+shell wifi ssid0 	 //设置ssid&pwd
+shell wifi ssid 	 //设置ssid&pwd，shell调试指令用
+shell wifi cparam0 	 //设置四元组
+shell wifi cparam 	 //设置四元组，shell指令用
+shell wifi token 	 //发送token给wifi
+shell wifi pwrsave 	 //设置省电模式
+shell wifi sleep 	 //进入深度睡眠
+shell wifi supend 	 //进入睡眠前准备
+shell wifi resume 	 //告诉wifigk已唤醒
+shell wifi setpir 	 //一次设置pir 所有参数 enable、time、dis
+shell wifi getpir 	 //读取pir 所有参数 enable、time、dis
+shell wifi pirsw 	 //单独设置移动侦测灵敏度开关    [0 : 关闭]   [1 : 开启]
+shell wifi pirtime 	 //单独设置移动侦测灵敏度触发时间  [1s~60s : 设置值为实际触发时间秒数]
+shell wifi pirdis 	 //单独设置移动侦测灵敏度距离    [1 : 近距离] [2 : 中距离] [3 : 远距离]
+shell wifi getint 	 //获取pir int中断状态  0--L ,   1--H,     2--表示雷达没识别到
+shell wifi pirtest 	 //pir或雷达产测测试
+shell wifi wakeup 	 //获取开机原因
+shell wifi ver 	 //获取wifi固件版本号
+shell wifi ip 	 //获取IP 192.168.1.127 192.168.1.1 255.255.255.0 -26
+shell wifi mac 	 //获取mac地址
+shell wifi rssi 	 //获取rssi
+shell wifi workmode 	 //获取wifi工作模式
+shell wifi nstatus 	 //获取wifi联网状态
+shell wifi catinfo 	 //获取wifi侧的网络相关信息
+shell wifi getpowersave 	 //获取wifi侧是否为省电模式
+shell wifi wdb 	 //wifi模块通用调试入口
+shell wifi sendali 	 //发送阿里数据，阿里新sdk用
+shell wifi keyack 	 //通知3861侧已收到按键
+shell wifi abrst 	 //出现sysylink异常情况时，调用该接口（通过拉高gpio1_7）让wifi复位同时会复位gk，以修复异常
+shell wifi unbindwifi 	 //请求3861执行解绑
+shell wifi getbindstatus 	 //获取是否已绑定 腾讯云 1---已绑定、   0---未绑定  直接从wifi芯片读取的
+shell wifi getcloudstatus 	 //获取连云状态  腾讯云   1---已连上云、   0---未连上云  直接从wifi芯片读取的
+shell wifi sendp 	 //发送属性给wifi/腾讯云
+shell wifi sende 	 //发送事件event给wifi/腾讯云
+shell wifi cb 	 //获取wifi侧的绑定和连云网络状态
+shell wifi sysotaprog 	 //上报tx_ota包下载进度
+shell wifi socver 	 //上报当前系统版本号
+shell wifi wmsg 	 //wifi通用msg接口 发送msg“字符串协议命令“ 给3861
+shell wifi estab 	 //获取建立连接状态: 已建立连接返回 1=OB_WIFI_EVENT_ESTABLISHED  ,  ip ready 返回2 =OB_WIFI_EVENT_IP_READY
+shell ota  
+shell ota uota 	 //U盘S检查&升级  //升级命令--- shell msgsend apiid 0x8703 sync 0
+shell ota iniconf 	 //U盘升级  修改ini文件压测次数，可手动停止压测或重新开始压测
+shell ota sysota 	 //接收并解析WiFi回调过来的ota url等信息
+shell ota netotaprepare 	 //下载腾讯云ota包成功后，开始进行烧录升级前期准备
+shell ota sysotasucc 	 //tx_ota升级成功状态上报
+shell ota otafaild 	 //升级失败状态切换
+shell ota initobver 	 //升级失败状态切换
+shell misc  
+shell misc restore 	 //请求恢复出厂设置
+shell misc timezone 	 //请求设置时区
+shell misc paudiopatch 	 //请求播放音频文件
+shell misc paudiofactorytest 
+shell misc paudiovolume 
+shell misc hmopen 	 //人形检测
+shell misc hmclose 
+shell misc hmstart 
+shell misc hmstop 
+shell misc hmdet 	 //人形检测接口，=0 表示没检测到人，> =1 表示检测到人数
+shell misc hmcb 
+shell misc hmen 
+shell misc hmdis 
+shell misc occdet 	 //遮挡检测 ,=0 表示没遮挡，  = 1 表示遮挡
+shell misc screensw 	 //设置云端配置参数
+shell misc screentimeout 
+shell misc daydet 
+shell misc sensorfov 	 //设置sensor FOV参数
+shell misc distortionswitch 	 //畸变矫正开关
+shell misc playvideo 
+shell misc lcdon 
+shell misc gpioinit 	 //gpio 控制命令
+shell misc gpiodir 
+shell misc setgpio 
+shell misc getgpio 
+shell misc wakemcu 	 //通过io为锁控MCU指示猫眼的工作状态：猫眼工作 wake_mcu =高电平；   猫眼休眠 wake_mcu =低电平
+shell misc scanauto 	 //自动扫码, 自动扫描到正确二维码便停止
+shell misc scanonce 	 //扫码一次/一帧
+shell misc scanstop 	 //停止扫码
+shell misc getdevinfoflash 	 //获取flash中devinfo分区数据信息
+shell misc getdevinfofile 	 //获取备份file中devinfo分区数据信息
+shell misc getappcfgflash 	 //获取flash中appconfig分区数据信息
+shell misc getappcfgfile 	 // 获取备份file中appconfig分区数据信息
+shell misc rcparam 	 //读取四元组信息
+shell misc testreportver 	 //上报系统版本号 test
+shell misc testdownload 	 //根据腾讯云下发的url信息下载ota包 test
+shell misc downloadnetfile 	 //根据腾讯云下发的url信息下载ota包
+shell misc reportotaerror 	 //tx_ota下载失败的状态上报
+shell misc getdatasize 	 //获取data分区剩余容量大小
+shell misc cleandata 	 //清理data分区临时文件
+shell main  
+shell main mdb 	 // main 调试菜单
+shell main wifimsg 	 //wifi消息事件回调
+shell main commsg 
+shell main tick 
+shell main serialmsg 
+shell main mcubindcallback 	 //锁控MCU通知猫眼已绑定成功回调  bt配网场景
+shell main mcuunbindcallback 	 //锁控MCU通知猫眼已响应猫眼的51解绑指令，  云端发起解绑场景
+shell main humannoticecallback 	 //人形检测回调
+shell main watchdog 	 // 看门狗关闭/打开
+shell main ipc2mcu 	 // IPC to mcu 
+shell main scan 	 //netconf 配网、绑定、解绑消息注册;  发起扫码配网请求（不绑定）， 会创建线程
+shell main bind 	 //发起扫码绑定请求+绑定, 会创建线程
+shell main scanbind/*scanbind*/ 
+shell main btprogram 	 //发起蓝牙配网请求（不绑定）, 会创建线程
+shell main bt 
+shell main btbindprogram 	 //发起蓝牙配网请求+绑定, 会创建线程
+shell main btbind 
+shell main unbind 	 //发起解绑
+shell main bindstop 	 //终止绑定流程
+shell main bindll 	 //底层绑定调试用
+shell main getbp 	 //get bind process status
+shell main getb 	 //get bind status
+shell main sig 	 //生成签名signature
+shell dev  
+shell dev health 	 //设备健康状态检查
+shell dev trysleep 	 //若空闲状态，则进入休眠
+shell dev forcesleep 	 //强制休眠（退出所有休眠机，强制进入休眠）
+shell dev dissleep 	 //禁止休眠（原理是进入工厂模式，从而延时24小时不休眠）
+shell dev ensleep 	 //使能休眠（原理是退出工厂模式）
+shell dev setpsta 	 //设置电源状态机，提交状态
+shell dev getpsta 
+shell dev setwsta 	 //设置运行状态机，提交状态
+shell dev getwsta 
+shell sh  
+shell sh init 
+shell sh uninit 
+shell sh start 
+shell sh stop 
+shell sh kill 
+shell sh reset 
+shell sh catmem 
+shell sh add 	 //增加一个自动运行循环任务，执行任务为api id，循环间隔时间设置为 tx =100的倍数 (单位ms)，最小值100、最大值2000
+shell sh del 	 //删除一个自动运行循环任务  shell sh del id 0x8818
+shell sh msgsend 
+shell sh msgrecv 
+shell sh msgstop 
+shell sh msgdefcfg 
+shell sh msgdefcat 
+shell sh msgtest 	 //sample，打印输出所接收到的msg结构体数据
+shell sh msgteststr 	 //sample，打印输出所接收到的msg结构体数据 及包含的字符串 eg. shell sh string srt abcde
+shell sh maike 	 //add your test api here
+shell sh test1 
+shell sh test2 
+shell sh test3 
+shell sh test4 
+shell sh test5 
+shell sh test6 
+shell sh test7 
+shell sh test8 
+shell sh strhex 	 //输入的字符串转换为十六进制打印输出，用作shell指令转换为十六进制串口数据输入
+shell sh shstrif 	 //hell root 序列化输入接口
+shell sh shdb 	 //shell模块一般/通用调试函数入口
+shell sh enantiflicker 	 // 打开摄像头防水波纹效果
+shell sh disantiflicker 	 //关闭摄像头防水波纹效果
+shell sh filesystest 	 //文件系统老化测试--多线程自动文件创建、写、保存、删除压测
+shell sh fullwritetest 	 //文件系统老化测试--不断写文件直到写满flash
+shell sh appcfgparamtest 	 //appcfg分区参数读写稳定性压测--三线程不断读写
+shell sh devinfoparamtest 	 //devinfo分区参数读写稳定性压测--不断读写四元组
+shell log  
+shell log init 
+shell log loghelp 	 //打印log帮助提示菜单
+shell log en 	 //打开指定模块的logd日志
+shell log dis 	 // 关闭指定模块的logd日志
+shell log enall 	 //打开所有logd日志
+shell log disall 	 //关闭所有logd日志
+shell log resetlog 	 //复位所有日志logd设置恢复默认值

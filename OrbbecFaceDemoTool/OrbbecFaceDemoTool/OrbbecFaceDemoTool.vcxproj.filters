@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="3rdlib">
+      <UniqueIdentifier>{2f9e21d7-9725-4c05-92c5-e51344d30f63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdlib\qserialex">
+      <UniqueIdentifier>{9550b57e-496f-42f3-a677-7e9e9239bafb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdlib\protocols">
+      <UniqueIdentifier>{8f947968-6387-48c4-886c-3635adb2e56c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdlib\protocols\lm">
+      <UniqueIdentifier>{4c522f31-abae-470a-a5e7-71c64ee6f133}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdlib\protocols\lk">
+      <UniqueIdentifier>{ffe4627b-4814-4a82-8d0e-80bf104a47b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdlib\protocols\ob">
+      <UniqueIdentifier>{ca189c55-33f4-4c1a-8907-53a8640af32c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdlib\utility">
+      <UniqueIdentifier>{7494debf-c168-4cbf-8a97-942af3ad04da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdlib\md5">
+      <UniqueIdentifier>{3df99483-9f36-42d8-9e1f-115a7344584e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdlib\QT-AES">
+      <UniqueIdentifier>{3f19a238-485c-4bbf-b4cd-8097186cbe70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdlib\qcomboboxex">
+      <UniqueIdentifier>{ddc7eadb-1a9b-4f7f-85ff-e84f3a39f780}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="OrbbecFaceDemoTool.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtUic Include="OrbbecFaceDemoTool.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="OrbbecFaceDemoTool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="OrbbecFaceDemoTool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdlib\qserialex\serialportex.cpp">
+      <Filter>3rdlib\qserialex</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdlib\protocols\lm\lmprotocol.cpp">
+      <Filter>3rdlib\protocols\lm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdlib\protocols\lk\lkprotocol.cpp">
+      <Filter>3rdlib\protocols\lk</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdlib\md5\md5sum.cpp">
+      <Filter>3rdlib\md5</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdlib\Qt-AES\qaesencryption.cpp">
+      <Filter>3rdlib\QT-AES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdlib\protocols\ob\OrbProtocol.cpp">
+      <Filter>3rdlib\protocols\ob</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdlib\qcomboboxex\qcomboboxex.cpp">
+      <Filter>3rdlib\qcomboboxex</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtTranslation Include="language\lang_en.ts">
+      <Filter>Translation Files</Filter>
+    </QtTranslation>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdlib\utility\crc_clac.h">
+      <Filter>3rdlib\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdlib\utility\time_duration.hpp">
+      <Filter>3rdlib\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdlib\utility\utility.hpp">
+      <Filter>3rdlib\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdlib\utility\crc.hpp">
+      <Filter>3rdlib\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdlib\md5\md5sum.h">
+      <Filter>3rdlib\md5</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdlib\protocols\common.h">
+      <Filter>3rdlib\protocols</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OrbbecFaceDemoTool.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\orbbec.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="..\..\3rdlib\qserialex\serialportex.h">
+      <Filter>3rdlib\qserialex</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\3rdlib\protocols\lm\lmprotocol.h">
+      <Filter>3rdlib\protocols\lm</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\3rdlib\protocols\lk\lkprotocol.h">
+      <Filter>3rdlib\protocols\lk</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\3rdlib\Qt-AES\qaesencryption.h">
+      <Filter>3rdlib\QT-AES</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\3rdlib\protocols\ob\OrbProtocol.h">
+      <Filter>3rdlib\protocols\ob</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\3rdlib\qcomboboxex\qcomboboxex.h">
+      <Filter>3rdlib\qcomboboxex</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\3rdlib\protocols\OrbbecFaceModuleProtocolInterface.h">
+      <Filter>3rdlib\protocols</Filter>
+    </QtMoc>
+  </ItemGroup>
+</Project>

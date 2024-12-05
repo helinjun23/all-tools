@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>qml;cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>qrc;rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+    </Filter>
+    <Filter Include="Translation Files">
+      <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
+      <Extensions>ts</Extensions>
+    </Filter>
+    <Filter Include="3rdlib">
+      <UniqueIdentifier>{5500787e-5607-4630-b8ed-32149b39b80e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdlib\qserialex">
+      <UniqueIdentifier>{e832d9da-45c2-4ef1-897c-0bd42066930d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdlib\relay">
+      <UniqueIdentifier>{a32af909-2200-4546-b600-92b2214fc814}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdlib\utility">
+      <UniqueIdentifier>{b3200499-f184-481c-ba9e-2001cb021e79}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdlib\protocols">
+      <UniqueIdentifier>{4c918b4b-6c0b-4d91-b2ba-e38bd515ebd5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="3rdlib\Qt-AES">
+      <UniqueIdentifier>{214f4496-803d-4e09-86f9-2896e272247b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="OrbbecStressTool.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtUic Include="OrbbecStressTool.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtMoc Include="OrbbecStressTool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClCompile Include="OrbbecStressTool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskManage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DevComConfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdlib\qserialex\serialportex.cpp">
+      <Filter>3rdlib\qserialex</Filter>
+    </ClCompile>
+    <ClCompile Include="DevLogManage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\3rdlib\Qt-AES\qaesencryption.cpp">
+      <Filter>3rdlib\Qt-AES</Filter>
+    </ClCompile>
+    <ClCompile Include="TaskPolicy.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QTextEditEx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="TaskManage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="DevComConfig.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\3rdlib\qserialex\serialportex.h">
+      <Filter>3rdlib\qserialex</Filter>
+    </QtMoc>
+    <QtMoc Include="DevLogManage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="..\..\3rdlib\Qt-AES\qaesencryption.h">
+      <Filter>3rdlib\Qt-AES</Filter>
+    </QtMoc>
+    <QtMoc Include="TaskPolicy.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QTextEditEx.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\3rdlib\relay\RelayProtocol.hpp">
+      <Filter>3rdlib\relay</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdlib\utility\crc_clac.h">
+      <Filter>3rdlib\utility</Filter>
+    </ClInclude>
+    <ClInclude Include="resource.h">
+      <Filter>Resource Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ProtocolManage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdlib\protocols\SerialOrbCmdPkt.h">
+      <Filter>3rdlib\protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdlib\protocols\OrbProtocolDataTyp.h">
+      <Filter>3rdlib\protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\3rdlib\utility\utility.hpp">
+      <Filter>3rdlib\utility</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="OrbbecStressTool.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="DevComConfig.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\orbbec.ico">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/orbbec.ico</file>
+    </qresource>
+</RCC>

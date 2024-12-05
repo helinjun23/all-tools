@@ -1,0 +1,10 @@
+﻿################################################################################
+# 此 .gitignore 文件已由 Microsoft(R) Visual Studio 自动创建。
+################################################################################
+
+/.vs/peephole/v16
+/Bin/peephole.exp
+/Bin/peephole.exe
+/Release
+/peephole.vcxproj.user
+/peephole.vcxproj.filters

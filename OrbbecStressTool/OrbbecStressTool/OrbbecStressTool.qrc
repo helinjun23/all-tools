@@ -1,0 +1,17 @@
+<RCC>
+    <qresource prefix="/">
+        <file>res/arrow_left.png</file>
+        <file>res/arrow_right.png</file>
+        <file>res/orbbec.ico</file>
+        <file>res/checkbox_off.png</file>
+        <file>res/checkbox_on.png</file>
+        <file>res/ready.png</file>
+        <file>res/stop.png</file>
+        <file>res/work.png</file>
+        <file>res/start_task.png</file>
+        <file>res/stop_task.png</file>
+        <file>res/enter.png</file>
+        <file>res/sw_off.png</file>
+        <file>res/sw_on.png</file>
+    </qresource>
+</RCC>
